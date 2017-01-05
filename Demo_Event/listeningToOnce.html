@@ -1,0 +1,24 @@
+<! DOCTYPE html> 
+  <head> <head> 
+    <title> Sự kiện Khi Ví dụ </ title> <title> Sự kiện Khi Ví dụ </ title> 
+      <script src = "https://code.jquery.com/jquery-2.1. 3.min.js "type =" text / javascript "> </ script> <script src = " https://code.jquery.com/jquery-2.1.3.min.js " loại = " text / javascript " > </ script> 
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js" type = "text / javascript"> </ script> <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.2/underscore-min.js" loại = "text / javascript" > </ script> 
+      <script src = " https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js "type =" text / javascript "> </ script> <script src = " https: // cdnjs .cloudflare.com / ajax / libs / backbone.js / 1.1.2 / xương sống-min.js " loại = " text / javascript " > </ script> 
+  </head> </head> 
+  <body> <body> 
+     < script type = "text / javascript"> <script loại = "text / javascript" > 
+     	// Tạo một đối tượng 'myVal' và 'myVal1' và mở rộng cho họ sử dụng phương pháp Backbone.Events // Tạo một đối tượng 'myVal' và 'myVal1 'và mở rộng cho họ sử dụng phương pháp Backbone.Events 
+        var myVal = _.extend ({name:' Saurav Ganguly '}, Backbone.Events); var myVal = _ . mở rộng ({ tên : 'Saurav Ganguly' }, Backbone . Sự kiện ); 
+        var myVal1 = _.extend ({name: 'Sachin Tendulkar'}, Backbone.Events); var myVal1 = _ . mở rộng ({ tên : 'Sachin Tendulkar' }, Backbone . Sự kiện ); 
+        // tạo ra các chức năng gọi lại 'listenMe' và gọi khi một đối tượng lắng nghe sự kiện đặc biệt vào một đối tượng khác // tạo ra các chức năng gọi lại 'listenMe' và gọi khi một đối tượng lắng nghe sự kiện đặc biệt vào một đối tượng 
+        var listenMe = function () { var listenMe = function () { 
+           document.write ( "giá trị là:"); . viết ( "Giá trị là:" ); 
+           document.write (this.name); . viết ( này . tên ); 
+        }; }; 
+        // Các đối tượng 'myVal1' lắng nghe một lần cho sự kiện 'listenMe' kích hoạt trên đối tượng 'myVal' // Đối tượng 'myVal1' lắng nghe một lần cho sự kiện 'listenMe' kích hoạt trên đối tượng 'myVal' 
+        myVal1.listenToOnce (myVal, 'listenMe ', Hãy nghe tôi nói); . listenToOnce ( myVal , 'listenMe' , listenMe ); 
+        // Các 'myVal' không có sự kiện listenMe và hiển thị giá trị của 'myVal1' // Các 'myVal' không có sự kiện listenMe và hiển thị giá trị của 'myVal1' 
+        myVal.trigger ( 'listenMe'); . trigger ( 'listenMe' ); 
+     </script> </script> 
+  </body> </body> 
+</html> </html>  
